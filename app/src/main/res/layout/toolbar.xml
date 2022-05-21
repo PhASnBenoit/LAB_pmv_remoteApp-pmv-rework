@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/red_700"
+    android:elevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnPrep"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="1dp"
+            android:onClick="onBtnPrepare"
+            android:text="@string/btnPrepare"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnAVM"
+            app:layout_constraintEnd_toStartOf="@+id/btnAVM"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnAVM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:onClick="onBtnAVM"
+            android:text="@string/btnAVM"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnReady"
+            app:layout_constraintStart_toEndOf="@+id/btnPrep"
+            app:layout_constraintTop_toTopOf="@+id/btnReady" />
+
+        <Button
+            android:id="@+id/btnReady"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:onClick="onBtnReady"
+            android:text="@string/btnReady"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnGo"
+            app:layout_constraintEnd_toStartOf="@+id/btnGo"
+            app:layout_constraintStart_toEndOf="@+id/btnAVM" />
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="32dp"
+            android:onClick="onBtnGo"
+            android:text="@string/btnGo"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/space"
+            app:layout_constraintStart_toEndOf="@+id/btnReady"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/lineTitle"
+            app:layout_constraintStart_toEndOf="@+id/btnGo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lineTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/lineNumber"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/space"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>
